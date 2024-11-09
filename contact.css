@@ -1,0 +1,204 @@
+/* Root Variables */
+:root {
+    --orange: #ff7800;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --outline: .1rem solid rgba(0, 0, 0, .1);
+    --outline-hover: .2rem solid var(--black);
+}
+
+/* Reset and Typography */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .logo i {
+    color: var(--orange);
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    color: var(--orange);
+}
+
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover {
+    background: var(--orange);
+    color: #fff;
+}
+
+/* Main Content Styling */
+main {
+    flex: 1;
+    padding-top: 100px; /* To account for the fixed navbar */
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(145deg, #333, #555);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+    padding: 10px;
+}
+
+.footer-left h3,
+.footer-middle h3,
+.footer-right h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer-left p {
+    font-size: 1em;
+    color: #ddd;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.footer-middle ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-middle ul li {
+    margin: 10px 0;
+}
+
+.footer-middle ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.footer-middle ul li a:hover {
+    color: #00bcd4;
+    text-decoration: underline;
+}
+
+.footer-right .social-icons a {
+    color: white;
+    margin: 0 15px;
+    font-size: 30px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-right .social-icons a:hover {
+    transform: scale(1.2);
+    color: #00bcd4;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 15px;
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design for Footer */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-middle ul {
+        margin-top: 20px;
+    }
+}
